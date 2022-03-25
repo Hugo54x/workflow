@@ -1,5 +1,27 @@
 // Edit Document
-i
+i, a, I, A
+
+// repeat
+.
+
+// move
+h left
+j down
+k up
+l right
+
+// visual / select
+v
 
 // Write and quit
 ESC :wq
+
+// copy line
+yy
+
+// delete line
+dd
+
+// paste
+p after
+P before
