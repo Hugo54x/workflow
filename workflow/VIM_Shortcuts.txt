@@ -4,6 +4,9 @@ i, a, I, A
 // repeat
 .
 
+// force quit
+q!
+
 // move
 h left
 j down
