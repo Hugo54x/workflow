@@ -1,0 +1,5 @@
+conda create -c conda-forge -n pypy pypy
+conda activate pypy
+pypy3 -m pip install ipykernel
+pypy3 -m ipykernel install --user --name pypy3 --display-name "PyPy3"
+conda install -c conda-forge jupyterlab

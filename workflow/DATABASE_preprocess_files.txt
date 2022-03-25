@@ -1,0 +1,12 @@
+#/bin/bash
+
+rawdatadir="/data/rawdata"
+importdatadir="/data/importdata"
+
+importfile=$rawdatadir"/<file name>.csv"
+exportfile=$importdatadir"/<new file name>.csv"
+echo "Processing "$importfile
+cat $importfile | sed -n '1p' | sed  's/\./_/g' > $exportfile  # replacing '.' through '_' to make it SQL conform
+cat $importfile | sed -n '3,$ p' | awk 'BEGIN{RS="\r\n";FS=OFS=","}{for(i=1;i<=NF;i++) if ($i=="") {$i="\N";}; print $0}' >> $exportfile  # replace empty strings with Null
+
+exit 0

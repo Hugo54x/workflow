@@ -1,0 +1,2 @@
+// Shred 1 Iteration with verbose output, force and overwrite with another pass of zeroes
+sudo shred -n1 -vfz /dev/<sda>

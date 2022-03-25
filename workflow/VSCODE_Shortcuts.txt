@@ -1,0 +1,47 @@
+// Comment Selection
+CTRL+K CTRL+C
+
+// Uncomment Selection
+CTRL+K CTRL+U
+
+// Stage Selection
+CTRL+K CTRL+ALT+S
+
+// Unstage Selection
+CTRL+K CTRL+N
+
+// Goto Line
+CTRL+G <lineNum>
+
+// Searching File
+CTRL+SHIFT+F
+
+// Open Settings
+CTRL +
+
+// Collapse All regions
+CTRL+K CTRL+0
+
+// Unfold All region
+CTRL+K CTRL+J
+
+// Fold subregion
+CTRL+K CTRL+[  --> US Layout
+
+// Unfold subregion
+CTRL+K CTRL+]  --> US Layout
+
+// Select current line
+CTRL+L
+
+// Delete Line
+CTRL+SHIFT+K
+
+// Cut current line
+CTRL+X
+
+// Copy Line Up/Down
+SHIFT+ALT+UP/DOWN
+
+// Move Line Up/Down
+ALT UP/DOWN

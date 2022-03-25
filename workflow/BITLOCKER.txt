@@ -1,0 +1,8 @@
+Temporaily suspend Bitlocker Encryption
+
+Suspend-BitLocker -MountPoint "C:" -RebootCount 0
+-> keeps suspended after reboot
+
+Resume Bitlocker Encryption
+
+Resume-BitLocker -MountPoint "C:"

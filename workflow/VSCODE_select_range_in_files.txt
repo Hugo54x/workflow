@@ -1,0 +1,16 @@
+Set Anchor Point
+----------------
+
+CTRL+K CTRL+B
+
+
+Jump to Position, till where you want to select
+-----------------------------------------------
+
+CTRL+G
+
+
+Position your Cursor and select with
+------------------------------------
+
+CTRL+K CTRL+K

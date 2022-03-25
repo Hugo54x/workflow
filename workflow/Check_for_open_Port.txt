@@ -1,0 +1,5 @@
+TCP CHECK
+nc -v <ip> <port>
+
+UDP CHECK
+nc -vz -u <ip|domain> <port>

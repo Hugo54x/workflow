@@ -1,0 +1,10 @@
+
+find <PATH> -name ".gitlab-ci.yml" -exec grep -iHn <STRING> {} \;
+  in this directory do something for any 
+find <PATH> -type f exec grep -iHn <STRING> {} \;
+
+## Find all files in folder with <string> recursivly
+`grep -i -R "<string>" <folder>`
+
+## Find all Files with name
+`find . -name "foo*"`

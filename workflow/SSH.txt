@@ -1,0 +1,5 @@
+# Get Status
+	eval `ssh-agent`
+
+#Add SSH Key
+	ssh-add ~\.ssh\id_xxxx

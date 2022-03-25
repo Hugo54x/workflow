@@ -1,0 +1,18 @@
+// origin --> git remote -v : may be a different name
+git merge <NAME_OF_ origin _BRANCH>/<BRANCH_TO_MERGE_IN>   # often develop is the merge target
+
+CHANGELOG.md updaten
+
+git push <NAME_OF_ origin _BRANCH> HEAD:<NAME_OF_MY_BRANCH>  # e.g. myFeatureX
+
+Gitlab oder Github
+	- Merge Request von <NAME_OF_MY_BRANCH> nach develop
+	- Changes checken
+	- Beschreibung: Ticketnummer hinzufügen
+	- Reviewer assignen
+
+Bei Merge Request noch folgendes angeben:
+	Meilenstein und Label: leer
+	Delete source (branch): JA
+	Squash commits: JA
+	

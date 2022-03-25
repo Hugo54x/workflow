@@ -1,0 +1,72 @@
+Sample input date format,
+
+Tuesday, May 24, 2016
+Wednesday, May 25, 2016
+
+
+You would need to use a different date format,
+
+%W, %b %d, %Y
+
+
+
+Since I had a similar problem, but the incoming date format was different, here is what you would do should your incoming date format be the following,
+
+Sample input date format,
+
+Tuesday, May 24, 2016
+Wednesday, May 25, 2016
+
+You would need to use a different date format,
+
+%W, %b %d, %Y
+
+Here is a link to the mysql documentation and a list of date formats, but briefly,
+
+Date part,
+
+%Y Year, numeric, four digits
+%y Year, numeric (two digits)
+%c Month, numeric (0..12)
+%m Month, numeric (00..12)
+%M Month name (January..December)
+%b Abbreviated month name (Jan..Dec)
+%d Day of the month, numeric (00..31)
+%e Day of the month, numeric (0..31)
+%D Day of the month with English suffix (0th, 1st, 2nd, 3rd, ?-)
+
+Weekday,
+
+%W Weekday name (Sunday..Saturday)
+%a Abbreviated weekday name (Sun..Sat)
+%w Day of the week (0=Sunday..6=Saturday)
+%j Day of year (001..366)
+
+Time
+
+%T  Time, 24-hour (hh:mm:ss)
+%r  Time, 12-hour (hh:mm:ss followed by AM or PM)
+%H  Hour (00..23)
+%h  Hour (01..12)
+%I  Hour (01..12)
+%k  Hour (0..23)
+%l  Hour (1..12)
+%i  Minutes, numeric (00..59)
+%S  Seconds (00..59)
+%s  Seconds (00..59)
+%f  Microseconds (000000..999999)
+%p  AM or PM
+
+There are other patterns which are not listed above.
+
+LOAD DATA INFILE '/path/to/temp_test.csv'
+IGNORE INTO TABLE temp_test
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\r\n' #use '\n' for linux
+  IGNORE 1 LINES
+(
+	@var_col1, 
+	col2
+)
+SET col1 = STR_TO_DATE(@var_col1,'%d-%b-%y %H:%i:%s');
+

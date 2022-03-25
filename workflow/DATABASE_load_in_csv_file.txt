@@ -1,0 +1,19 @@
+use <database name>;
+
+truncate table <table name>;
+load data infile '/var/lib/mysql-files/<file name>.csv' ignore
+  into TABLE <table name>
+  FIELDS TERMINATED by ','
+  ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
+  ignore 1 lines
+  (
+    @From,
+    @Till,
+    Temp,
+    Pressure,
+    LightIntensity,
+    Humidity
+  )
+SET From = STR_TO_DATE(@From,'%c/%e/%Y %H:%i'), Till = STR_TO_DATE(@Till,'%c/%e/%Y %H:%i');
+show warnings;

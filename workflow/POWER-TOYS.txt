@@ -1,0 +1,8 @@
+// Search
+ALT + SPACE
+
+// Color Picker
+WIN + SHIFT + C
+
+// Fancy Zones 
+WIN + SHIFT + Ö

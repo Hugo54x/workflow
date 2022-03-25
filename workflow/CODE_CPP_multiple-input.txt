@@ -1,0 +1,14 @@
+cin >> sel;
+switch (sel)
+{
+  case 'y':
+  case 'Y':
+	cout << "Yes";
+	break;
+  case 'n':
+  case 'N':
+	cout << "No";
+	break;
+  default:
+   cout << "Wrong Input";
+}

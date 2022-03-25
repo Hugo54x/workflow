@@ -1,0 +1,5 @@
+// Edit Document
+i
+
+// Write and quit
+ESC :wq

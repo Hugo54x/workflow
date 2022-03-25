@@ -1,0 +1,3 @@
+sudo apt install neofetch
+
+sudo bash -c $'echo "neofetch" >> /etc/profile.d/motd.sh && chmod +x /etc/profile.d/motd.sh'
