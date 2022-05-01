@@ -1,0 +1,9 @@
+// compress multiple files
+// go directly into folder with files, 
+// because otherwise you will have the folder structure
+// within your compressed file
+tar cvzf trip.tar.gz trip_20*.csv
+
+// decompress
+tar xvzf trip.tar.gz -C /path/to/extract
+unxz <file>.xz
