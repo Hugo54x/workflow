@@ -1,0 +1,29 @@
+// install git-lfs under linux
+sudo apt install git-lfs
+
+// install git-lfs 
+git lfs install
+
+// add large files
+git add .gitattributes
+git lfs track "*.iso"
+
+// show status
+git lfs status
+git lfs ls-files
+
+// fetch data
+git lfs fetch origin master
+
+// very big files
+Handle Files greater than 4GB:
+Disable smudging
+
+git lfs install --skip-smudge
+git lfs env
+
+git config filter.lfs.process = "git-lfs filter-process --skip"
+git config filter.lfs.smudge = "git-lfs smudge --skip -- %f"
+
+// pull data
+git lfs pull
