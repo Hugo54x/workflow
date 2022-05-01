@@ -1,5 +1,5 @@
-// origin --> git remote -v : may be a different name
-git merge <NAME_OF_ origin _BRANCH>/<BRANCH_TO_MERGE_IN>   # often develop is the merge target
+// get changes from e.g. master to your current branch your on
+git merge master
 
 CHANGELOG.md updaten
 
