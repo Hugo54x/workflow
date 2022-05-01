@@ -1,0 +1,2 @@
+// change commit message of an already commited change
+git commit --amend -m "New commit message"
