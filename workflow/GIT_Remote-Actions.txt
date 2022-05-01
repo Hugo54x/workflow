@@ -1,0 +1,11 @@
+// Delete remote branch
+// remote_name: origin -> git remote show
+git push <remote_name> :<branch_name>
+
+// Reset commited and pushed changes
+// remote_name: origin
+// branch_name: delete from this branch
+// commit_hash: 7b678ead7ee8c9e; this is the valid commit
+//			all other commits after this will be deleted
+
+git push <remote_name> +<commit_hash>^:<branch_name>
