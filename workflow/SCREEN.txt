@@ -1,0 +1,17 @@
+// install screen
+sudo apt install screen
+
+// start session
+screen -S <session_name>
+
+// detach current session
+CTRL+A , D
+
+// list sessions
+screen -ls
+
+// return to session
+screen -r <session_name>
+
+// connection to serial connection
+screen /dev/ttyS0 <baudrate>
