@@ -1,0 +1,1 @@
+find /path/to/data -type f -name 'sample_file-1*.csv' -exec du -ch {} + | tail -n1
