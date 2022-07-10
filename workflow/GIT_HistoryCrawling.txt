@@ -1,0 +1,11 @@
+//show the current state of file at commit
+git show <commit_hash>:<file>
+
+//list a history with file names which is grep-able
+git whatchanged -p
+
+//show only the latest change
+git diff HEAD^ HEAD
+
+//show the history of one specific file
+git log -p -- <filename>
