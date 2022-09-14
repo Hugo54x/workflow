@@ -1,0 +1,13 @@
+// Input Evaluation
+cin >> input;
+switch (input) {
+    case 'y':
+    case 'Y':
+        cout << "Yes";
+    case 'n':
+    case 'N':
+        cout << "No";
+        break;
+    default:
+    cout << "Unknown input";
+}
