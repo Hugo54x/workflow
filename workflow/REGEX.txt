@@ -1,0 +1,7 @@
+// Extract the first column of csv and quote it
+(.+)(,.+,.+)
+"$1"$2
+
+// Remove a column from csv
+(.+),(.+,.+)
+$2
