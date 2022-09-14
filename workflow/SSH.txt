@@ -1,5 +1,13 @@
-# Get Status
+// Get Status
 	eval `ssh-agent`
 
-#Add SSH Key
+// Add SSH Key
 	ssh-add ~\.ssh\id_xxxx
+
+// SSH Config File
+IdentityAgent /Users/<username>/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+Host *
+	AddKeysToAgent yes
+	UseKeychain yes
+	ForwardAgent yes
