@@ -15,4 +15,7 @@ Bei Merge Request noch folgendes angeben:
 	Meilenstein und Label: leer
 	Delete source (branch): JA
 	Squash commits: JA
-	
+
+
+// merge incoming changes while holding local changes
+git pull --no-ff
