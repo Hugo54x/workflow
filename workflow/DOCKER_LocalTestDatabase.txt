@@ -1,0 +1,27 @@
+//Spin up Database
+
+version: '3.9'
+
+services:
+
+  dg-postgres-db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: example
+    volumes:
+      - ./data:/data
+    ports:
+      - 5432:5432
+
+
+//Install Docker PG Admin Extension
+docker extension install mochoa/pgadmin4-docker-extension
+
+//Connect through the Extension to Database
+Connection URL: host.docker.internal
+Connection Port: 5432
+Connection User: postgres
+Connection Password: postgres
