@@ -1,0 +1,5 @@
+//Unix
+code --list-extensions | xargs -L 1 echo code --install-extension
+
+//Windows
+code --list-extensions | % { "code --install-extension $_" }
