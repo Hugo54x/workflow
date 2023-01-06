@@ -1,0 +1,2 @@
+// compress all files incl hidden without including folder root
+7za a <name_of_archive>.7z <path_to_directory>/.
