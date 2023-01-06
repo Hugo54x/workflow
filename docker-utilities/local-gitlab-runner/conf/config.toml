@@ -1,0 +1,24 @@
+concurrent = 2 #! number of maximal jobs
+check_interval = 0 #! not smaller than zero
+log_level = "info" #! info, warn
+
+[session_server]
+  session_timeout = 1800
+
+[[runners]]
+  name = "docker-compose-runner"
+  url = "#TODO"
+  token = "#TODO" #! gitlab project settings -> cicd -> runners
+  executor = "docker" #! possible options: k8s, vms, ssh (bare metal)
+  environment = ["DOCKER_DRIVER=overlay2", "LC_ALL=en_US.UTF-8"]
+  [runners.docker]
+    tls_verify = true
+    image = "docker:rc-dind" #! do not use compse:alpine-19.xx. its outdated
+    privileged = true #! enable to run docker in docker (dind)
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    cache_dir = "" #! caching of dind is more complicated. the best approch is to use a container registry to push and pull the cache
+    volumes = ["/certs/client", "/cache"]
+    shm_size = 0
+    cpus = "8" #! docker (desktop) core settings
