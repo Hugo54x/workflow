@@ -1,0 +1,5 @@
+// get io values
+zpool iostat
+
+// get stats about your pool
+zpool get capacity,size,health,fragmentation
