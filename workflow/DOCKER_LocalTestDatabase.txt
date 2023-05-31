@@ -21,6 +21,7 @@ services:
 docker extension install mochoa/pgadmin4-docker-extension
 
 //Connect through the Extension to Database
+// ! It could be necessary to use the IP of host.docker.internal instead
 Connection URL: host.docker.internal
 Connection Port: 5432
 Connection User: postgres
