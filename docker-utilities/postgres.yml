@@ -8,5 +8,6 @@ services:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: postgres
       POSTGRES_DB: testdb
+    # ping host.docker.internal to get ip; use ip to connect
     ports:
-      - 127.0.0.1:5432:5432
+      - 5432:5432
