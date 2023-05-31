@@ -11,3 +11,5 @@ services:
     # ping host.docker.internal to get ip; use ip to connect
     ports:
       - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgres/data
