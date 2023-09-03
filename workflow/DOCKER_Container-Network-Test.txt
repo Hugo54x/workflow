@@ -1,0 +1,8 @@
+// Start Server
+docker run  -it --rm --name=iperf3-server -p 5201:5201 networkstatic/iperf3 -s
+
+// Get IP Address from server container
+docker inspect --format "{{ .NetworkSettings.IPAddress }}" iperf3-server
+
+// Start clinet pod and run test
+docker run -it --rm networkstatic/iperf3 -c <ip_address>
