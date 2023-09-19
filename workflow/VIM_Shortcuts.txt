@@ -28,3 +28,6 @@ dd
 // paste
 p after
 P before
+
+//delete 100 lines
+100 dd
