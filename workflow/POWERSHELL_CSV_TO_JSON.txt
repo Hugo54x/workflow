@@ -1,1 +1,0 @@
-Import-Csv .\data.csv | ConvertTo-Json | Out-File .\data.json
