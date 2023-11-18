@@ -1,9 +1,0 @@
-# Run in an elevated prompt
-1. Stop Docker 
-2. wsl --shutdown
-3. wsl -l -v
-$FilePath = "C:\Users\<user>\AppData\Local\Docker\wsl\data\ext4.vhdx"
-
-Mount-VHD -Path $FilePath -ReadOnly
-Optimize-VHD -Path $FilePath -Mode Full
-Dismount-VHD -Path $FilePath
